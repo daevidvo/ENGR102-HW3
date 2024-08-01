@@ -128,6 +128,16 @@ def z_score(x, mu, sigma):
 
     return ((x-mu)/sigma)
 
+def zScoreCalculator(populationArray: dict) -> float:
+    popAvg = mean(populationArray)
+    popStdDev = stdev(populationArray, popAvg)
+
+    print(popAvg)
+
+    for item in populationArray:
+        print(z_score(item,popAvg,popStdDev))        
+
+zScoreCalculator(population2)
 
 '''
 part 1: calculate population mean
